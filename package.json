@@ -1,0 +1,33 @@
+{
+  "name": "the-mealer-dealer",
+  "version": "1.0.0",
+  "description": "A meal prep app which gathers user input/preferences and chooses from a library of meals to cook from",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js",
+    "dbStart": "node models/index.js && node seeds/seed.js && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pkrysinski/The-Mealer-Dealer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  },  
+  "bugs": {
+    "url": "https://github.com/Pkrysinski/The-Mealer-Dealer/issues"
+  },
+  "homepage": "https://github.com/Pkrysinski/The-Mealer-Dealer#readme"
+}
