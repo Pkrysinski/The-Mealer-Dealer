@@ -1,12 +1,12 @@
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { Recipe } = require('../models');
 
-const userData = require('./userData.json');
+const recipeData = require('./recipeData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
+  const recipes = await Recipe.bulkCreate(recipeData, {
     individualHooks: true,
     returning: true,
   });
@@ -15,3 +15,5 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
+// www.themealdb.com/api/json/v1/1/random.php for random recipes to seed. Missing servings and cook/prep time.
