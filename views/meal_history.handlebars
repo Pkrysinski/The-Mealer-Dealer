@@ -1,0 +1,5 @@
+{{!-- This will pass each meal in the user's cooked meals from the UserToRecipe table to the cooked_meals.handlebars partial to be rendered as a card --}}
+{{!-- Will likely need to reference the UserToRecipe table as the main table, and have the Recipe table as the include in the function --}}
+{{#each mealHistory as | mealHistory | }}
+{{> cooked_meals}}
+{{/each}}
