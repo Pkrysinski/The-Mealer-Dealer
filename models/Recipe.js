@@ -17,30 +17,35 @@ Recipe.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
+    //mainProtein choices: beef, chicken, fish, pork, vegetarian, any
+    mainProtein: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     description: {
         type: DataTypes.STRING,
         allowNull: false,
-    },    
+    },
     image: {
         type: DataTypes.STRING,
         allowNull: false,
-    },      
+    },
     ingredients: {
         type: DataTypes.STRING,
         allowNull: false,
-    },          
+    },
     instructions: {
         type: DataTypes.TEXT('long'),
         allowNull: false,
-    },     
+    },
     servings: {
         type: DataTypes.INTEGER,
         allowNull: false,
-    },           
+    },
     prepTime: {
         type: DataTypes.STRING,
         allowNull: false,
-    },   
+    },
     cookTime: {
         type: DataTypes.STRING,
         allowNull: false,
