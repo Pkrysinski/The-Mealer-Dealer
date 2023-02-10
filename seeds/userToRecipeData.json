@@ -1,0 +1,12 @@
+[
+    {
+        "user_id": 1,
+        "recipe_id": 1,
+         "cooked": true
+    },
+    {
+        "user_id": 1,
+        "recipe_id": 2,
+        "cooked": false
+    }
+]
