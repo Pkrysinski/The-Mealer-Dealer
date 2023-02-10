@@ -16,12 +16,18 @@
             <nav>
                 {{#if logged_in}}
                 <a href="/homepage">Homepage</a>
-                <button> class="no-button" id="logout">logout</button>
+                <button> class="no-button" id="logout">Login</button>
                 {{else}}
                 <a href="/login">login</a>
                 {{/if}}
             </nav>
         </header>
+        <main class="container container-fluid mt-5">
+            {{{ body }}}
+        </main>
     </div>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
 </body>
 </html>
