@@ -1,4 +1,5 @@
 {{!-- This is the container for the "Build Your Meal" form --}}
+{{#if logged_in}}
 <div class='build-meal-container'>
     <h2>
         Please enter in some info about your meal plan!
@@ -26,3 +27,6 @@
         </button>
     </form>
 </div>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}

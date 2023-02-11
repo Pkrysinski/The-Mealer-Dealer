@@ -1,8 +1,28 @@
 const router = require('express').Router();
 const { User, UserToRecipe, Recipe } = require('../../models');
 const sequelize = require('sequelize');
+const withAuth = require('../../utils/auth');
 
 //Build meal routes
+router.get('/build_your_meal', withAuth, async (req, res) => {
+    try {
+      // Find the logged in user based on the session ID
+      const userData = await User.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+        include: [{ model: Recipe }],
+      });
+  
+      const user = userData.get({ plain: true });
+  
+      res.render('build_your_meal', {
+        ...user,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
+
 
 //Get meal results
 router.get('/meal_results', async (req, res) => {
