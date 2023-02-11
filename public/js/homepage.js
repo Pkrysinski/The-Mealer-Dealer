@@ -3,18 +3,8 @@ const createMealButtonHandler = async (event) => {
 
     event.preventDefault();
 
-    const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        // If successful, redirect the browser to the profile page
-        document.location.replace('/profile');
-      } else {
-        alert(response.statusText);
-      }
+    document.location.replace('/api/meals/build_your_meal');
+
   };
 
 document.querySelector('#createMealBtn').addEventListener('click', createMealButtonHandler);
