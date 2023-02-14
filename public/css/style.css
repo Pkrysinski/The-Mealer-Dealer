@@ -67,7 +67,6 @@ h3 {
 }
 
 #email-input {
-    float center;
     border: 2px solid black;
     border-radius: 10%;
     margin-left: 30px;
