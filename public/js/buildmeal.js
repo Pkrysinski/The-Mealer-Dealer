@@ -5,7 +5,7 @@ const submitMealButtonHandler = async (event) => {
 
     const quantityOfMeals = document.querySelector('#quantityOfMeals').value.trim();
     const quantityOfPeople = document.querySelector('#quantityOfPeople').value.trim();
-    const main_protein = document.querySelector('#main_protein').value.trim();
+    const main_protein = document.querySelector('#main_protein').value;
     const total_time = document.querySelector('#total_time').value;
 
     if (total_time && main_protein) {
@@ -20,7 +20,7 @@ const submitMealButtonHandler = async (event) => {
       // if (response.ok) {
         document.location.replace(`/api/meals/meal_results/${params}`);
       } else {
-        alert(response.statusText);
+        alert("Please make sure all fields are populated!");
       }
     //}    
 
