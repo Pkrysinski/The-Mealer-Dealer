@@ -31,7 +31,7 @@ Recipe.init(
         allowNull: false,
     },
     ingredients: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT('long'),
         allowNull: false,
     },
     instructions: {
