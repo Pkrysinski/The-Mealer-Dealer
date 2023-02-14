@@ -23,7 +23,7 @@ Recipe.init(
         allowNull: false,
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT('long'),
         allowNull: false,
     },
     image: {
