@@ -12,7 +12,7 @@
         <label for="quantityOfPeople">Quantity of People (between 1 and 10):</label>
         <input type="number" id="quantityOfPeople" name="quantityOfPeople" min="1" max="10">        
 
-        <label for="proteinChoice">Choose a car:</label>
+        <label for="proteinChoice">Choose a protein:</label>
         <select id="proteinChoice" name="proteinChoice">
             <option value="beef">Beef</option>
             <option value="chicken">Chicken</option>
@@ -22,11 +22,12 @@
             <option value="any">Any</option>
         </select>
 
-        <button type='submit' value='Submit'>
+        <button type='submit' value='Submit' id='submitMealBtn'>
         Submit
         </button>
     </form>
 </div>
+<script src="/js/buildmeal.js"></script>
 {{else}}
 <a href="/login">You must login first to view this page</a>
 {{/if}}
