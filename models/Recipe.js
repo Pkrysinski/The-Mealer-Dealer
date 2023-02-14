@@ -17,7 +17,7 @@ Recipe.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    //mainProtein choices: beef, chicken, fish, pork, vegetarian, any
+    //main_protein choices: beef, chicken, fish, pork, vegetarian, any
     main_protein: {
         type: DataTypes.STRING,
         allowNull: false,
