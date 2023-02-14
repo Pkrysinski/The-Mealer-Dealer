@@ -1,0 +1,158 @@
+body {
+    
+    background-color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* homepage */
+h1 {
+    text-align: center;
+    color:goldenrod
+}
+
+#login {
+    text-align: center;
+    color: blue;
+}
+
+h3 {
+    text-align: center;
+    color:darkslategrey
+}
+
+#createMealBtn {
+    border: none;
+    background-color: hsl(237, 84%, 25%);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 365px;
+}
+
+#pastMealsBtn {
+    border: none;
+    background-color: hsl(237, 84%, 25%);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    margin-left: 665px;
+    margin-bottom: 545px;
+
+}
+
+/*login signup page */
+
+.login-header {
+    text-align: center;
+}
+
+.signup-header {
+    text-align: center;
+}
+
+#email-input {
+    float center;
+    border: 2px solid black;
+    border-radius: 10%;
+    margin-left: 30px;
+    margin-bottom: 5px;;
+}
+
+#email-signup{
+    border-radius: 10%;
+    margin-left: 30px;
+    margin-bottom: 5px;;
+}
+
+#login-btn {
+    background-color: hsl(237, 73%, 56%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#signup-btn {
+    background-color: hsl(237, 73%, 56%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* build your meal page */
+
+h2 {
+    text-align: center;
+    color:deepskyblue;
+}
+
+#quantityOfMeals {
+    color:deepskyblue;
+}
+
+#quantityOfPeople {
+    color:deepskyblue;
+}
+
+#submit-btn {
+    background-color: hsl(237, 73%, 56%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#logout {
+    background-color: hsl(237, 73%, 56%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
