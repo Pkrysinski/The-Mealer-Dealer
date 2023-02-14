@@ -60,6 +60,11 @@ h3 {
     text-align: center;
 }
 
+#email-input {
+    border: 2px solid black;
+    border-radius: 10%;
+    margin-left: 30px;
+    margin-bottom: 5px;;
 form {
     padding: 40px;
     background: white;
