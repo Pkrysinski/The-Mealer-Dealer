@@ -25,7 +25,8 @@ router.get('/build_your_meal', withAuth, async (req, res) => {
 
 
 //Get meal results
-router.post('/meal_results', async (req, res) => {
+// router.post('/meal_results', async (req, res) => {
+router.get('/meal_results', async (req, res) => {
     try {
         if (req.body.mainProtein === "Any") req.body.mainProtein = "*";
         const mealResults = await Recipe.findAll({

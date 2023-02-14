@@ -18,7 +18,7 @@ Recipe.init(
         allowNull: false,
     },
     //mainProtein choices: beef, chicken, fish, pork, vegetarian, any
-    mainProtein: {
+    main_protein: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -42,11 +42,11 @@ Recipe.init(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    prepTime: {
+    prep_time: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    cookTime: {
+    cook_time: {
         type: DataTypes.STRING,
         allowNull: false,
     },           
