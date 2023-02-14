@@ -49,7 +49,11 @@ Recipe.init(
     cook_time: {
         type: DataTypes.STRING,
         allowNull: false,
-    },           
+    },
+    total_time: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    }           
   },
   {
     sequelize,
