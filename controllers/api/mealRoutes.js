@@ -113,7 +113,8 @@ router.get('/meal_history', withAuth, async (req, res) => {
   try {
 
     const userHistory = await Recipe.findAll({
-      include: [{ model: User, through: UserToRecipe, as: 'meals_cooked', where: { id: req.session.user_id }  }],
+      // include: [{ model: User, through: UserToRecipe, as: 'meals_cooked', where: { id: req.session.user_id }  }],
+      include: [{ model: UserToRecipe, where: { user_id: req.session.user_id, cooked: true }  }],
     });
 
     const history = userHistory.map((cookedMeal) =>
