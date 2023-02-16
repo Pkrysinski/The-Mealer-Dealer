@@ -108,12 +108,14 @@ router.get('/meal_results', withAuth, async (req, res) => {
 router.get('/meal_history', async (req, res) => {
   try {
 
-    const userHistory = await UserToRecipe.findAll({
-      include: [{ model: Recipe }],
-      where: {
-        user_id: req.session.user_id,
-      }
-    })
+    const userHistory = await User.findAll({
+      include: [{ model: Recipe, through: UserToRecipe, as: 'cooked_meals'  }],
+      where: { id: 1, }
+    });
+
+    console.log(userHistory);
+
+    res.json(userHistory);
 
   } catch (err) {
     res.status(500).json(err);
