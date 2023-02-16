@@ -32,6 +32,7 @@ Recipe Results
 Past Meals
 
 ## Licensee
+
 MIT
 https://opensource.org/license/mit/
 
