@@ -19,7 +19,7 @@ header h1 {
 /* homepage */
 h1 {
     text-align: center;
-    color:goldenrod
+    color:goldenrod;
 }
 
 #login {
@@ -30,6 +30,10 @@ h1 {
 h3 {
     text-align: center;
     color:darkslategrey
+}
+
+h4 {
+    color:hsl(237, 73%, 56%);
 }
 
 .cta-button {
@@ -54,6 +58,7 @@ h3 {
 
 .login-header {
     text-align: center;
+    color: blue
 }
 
 .signup-header {
@@ -61,10 +66,9 @@ h3 {
 }
 
 #email-input {
-    border: 2px solid black;
-    border-radius: 10%;
     margin-left: 30px;
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
+}
 form {
     padding: 40px;
     background: white;
