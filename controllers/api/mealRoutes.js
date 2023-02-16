@@ -94,34 +94,6 @@ router.get('/meal_results/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/meal_results', withAuth, async (req, res) => {
-  try {
-    // Pass serialized data and session flag into template
-    res.render('meal_results', {
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/meal_history', async (req, res) => {
-  try {
-
-    const userHistory = await User.findAll({
-      include: [{ model: Recipe, through: UserToRecipe, as: 'cooked_meals'  }],
-      where: { id: 1, }
-    });
-
-    console.log(userHistory);
-
-    res.json(userHistory);
-
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.get('/meal_history', async (req, res) => {
   try {
 
