@@ -23,6 +23,13 @@ User.belongsToMany(Recipe, {
   as: 'cooked_meals'
 });
 
+Recipe.hasOne(UserToRecipe, {
+  foreignKey: 'recipe_id',
+});
+UserToRecipe.belongsTo(Recipe, {
+  foreignKey: 'recipe_id',
+});
+
 module.exports = {
   User,
   Recipe,

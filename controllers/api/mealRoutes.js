@@ -34,6 +34,16 @@ router.get('/meal_results/:total_time&:main_protein', withAuth, async (req, res)
 
     if (req.params.main_protein === "any") {
       mealResults = await Recipe.findAll({
+        include: [
+          {
+            model: UserToRecipe,
+            attributes: ['cooked'],    
+            where: {
+              user_id: req.session.user_id,
+            },
+            required: false,
+          },
+        ],                
         where: {
           // sequelize.Op.lte = less than equal
           total_time: {
@@ -43,6 +53,15 @@ router.get('/meal_results/:total_time&:main_protein', withAuth, async (req, res)
       });
     } else {
       mealResults = await Recipe.findAll({
+        include: [
+          {
+            model: UserToRecipe,
+            attributes: ['cooked'],      
+            where: {
+              user_id: req.session.user_id,
+            },                  
+          },
+        ],             
         where: {
           main_protein: req.params.main_protein,
           // sequelize.Op.lte = less than equal
@@ -53,12 +72,8 @@ router.get('/meal_results/:total_time&:main_protein', withAuth, async (req, res)
       });
     }
 
-    //console.log("Raw query output: ", mealResults);
-
     const meals = mealResults.map((meal) =>
       meal.get({ plain: true }));
-
-    //console.log("rendering meal_results with data: ", meals);
 
     res.render('meal_results', {
       meals,
