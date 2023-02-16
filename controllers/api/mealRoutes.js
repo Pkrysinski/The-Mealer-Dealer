@@ -105,11 +105,9 @@ router.get('/meal_results', withAuth, async (req, res) => {
   }
 });
 
-router.put('/meal_results/:id', async (req, res) => {
-//router.put('/meal_results/:id', withAuth, async (req, res) => {  
+router.put('/meal_results/:id', withAuth, async (req, res) => {  
   // Need to first check here to see if a user_to_recipe exists to update, before updating.
   // If not, we need to create one.
-  console.log("in here!!!");
   try {
     const [user_to_recipe, created] = await UserToRecipe.findOrCreate({
       where: {
