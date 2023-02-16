@@ -85,4 +85,43 @@ router.get('/meal_results', withAuth, async (req, res) => {
   }
 });
 
+router.put('/meal_results/:id', async (req, res) => {
+//router.put('/meal_results/:id', withAuth, async (req, res) => {  
+  // Need to first check here to see if a user_to_recipe exists to update, before updating.
+  // If not, we need to create one.
+  console.log("in here!!!");
+  try {
+    const [user_to_recipe, created] = await UserToRecipe.findOrCreate({
+      where: {
+        user_id: req.session.user_id,
+        recipe_id: req.params.id,
+      },
+      defaults: {
+        cooked: true,
+      },
+    });
+
+    if (created === false) {
+      const update = await UserToRecipe.update(
+        {
+          cooked: req.body.cooked,
+        },
+        {
+          where: {
+            user_id: req.session.user_id,
+            recipe_id: req.params.id,
+          },
+        },
+      )
+      res.status(200).json(update);
+    } else {
+      res.status(200).json("Successful cooked update!");
+    };
+
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
