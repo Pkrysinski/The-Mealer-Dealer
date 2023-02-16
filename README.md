@@ -34,13 +34,17 @@ Past Meals
 ## Licensee
 
 MIT
+
 https://opensource.org/license/mit/
 
 ## Contributors
 
 Danny Bracht
+
 Brennan Coats
+
 Joey Hayes
+
 Peter Krysinski
 
 ## Links
