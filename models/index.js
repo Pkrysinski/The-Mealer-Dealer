@@ -27,7 +27,7 @@ Recipe.hasOne(UserToRecipe, {
   foreignKey: 'recipe_id',
 });
 UserToRecipe.belongsTo(Recipe, {
-  foreignKey: 'recipe_id',
+  foreignKey: 'id',
 });
 
 module.exports = {
