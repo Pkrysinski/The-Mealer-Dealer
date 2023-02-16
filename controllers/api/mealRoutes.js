@@ -74,7 +74,7 @@ router.get('/meal_results/:total_time&:main_protein', withAuth, async (req, res)
   }
 });
 
-router.get('/meal_results/:id', async (req, res) => {
+router.get('/meal_results/:id', withAuth, async (req, res) => {
   try {
 
     const mealResult = await Recipe.findOne({
@@ -105,6 +105,19 @@ router.get('/meal_results', withAuth, async (req, res) => {
   }
 });
 
+router.get('/meal_history', async (req, res) => {
+  try {
 
+    const userHistory = await UserToRecipe.findAll({
+      include: [{ model: Recipe }],
+      where: {
+        user_id: req.session.user_id,
+      }
+    })
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
