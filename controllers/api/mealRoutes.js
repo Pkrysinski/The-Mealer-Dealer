@@ -74,7 +74,7 @@ router.get('/meal_results/:total_time&:main_protein', withAuth, async (req, res)
   }
 });
 
-router.get('/meal_results/:id', async (req, res) => {
+router.get('/meal_results/:id', withAuth, async (req, res) => {
   try {
 
     const mealResult = await Recipe.findOne({
@@ -94,17 +94,58 @@ router.get('/meal_results/:id', async (req, res) => {
   }
 });
 
-router.get('/meal_results', withAuth, async (req, res) => {
+router.get('/meal_history', async (req, res) => {
   try {
-    // Pass serialized data and session flag into template
-    res.render('meal_results', {
-      logged_in: req.session.logged_in
+
+    const userHistory = await User.findAll({
+      include: [{ model: Recipe, through: UserToRecipe, as: 'cooked_meals'  }],
+      where: { id: 1, }
     });
+
+    console.log(userHistory);
+
+    res.json(userHistory);
+
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
+router.put('/meal_results/:id', withAuth, async (req, res) => {  
+  // Need to first check here to see if a user_to_recipe exists to update, before updating.
+  // If not, we need to create one.
+  try {
+    const [user_to_recipe, created] = await UserToRecipe.findOrCreate({
+      where: {
+        user_id: req.session.user_id,
+        recipe_id: req.params.id,
+      },
+      defaults: {
+        cooked: true,
+      },
+    });
 
+    if (created === false) {
+      const update = await UserToRecipe.update(
+        {
+          cooked: req.body.cooked,
+        },
+        {
+          where: {
+            user_id: req.session.user_id,
+            recipe_id: req.params.id,
+          },
+        },
+      )
+      res.status(200).json(update);
+    } else {
+      res.status(200).json("Successful cooked update!");
+    };
+
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 module.exports = router;
