@@ -10,7 +10,8 @@ the app select a meal based on the criteria.
 
 ## Installation
 
-Node. NPM. bcrypt. connect-session-sequelizer. dotenv. express.   express-handlerbars. express-session. mysql2. sequelize. 
+Node. NPM. bcrypt. connect-session-sequelizer. dotenv. express.   
+express-handlerbars. express-session. mysql2. sequelize. 
 
 ## Usage
 
