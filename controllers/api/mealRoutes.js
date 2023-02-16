@@ -77,21 +77,17 @@ router.get('/meal_results/:total_time&:main_protein', withAuth, async (req, res)
 router.get('/meal_results/:id', async (req, res) => {
   try {
 
-     console.log("Request: ", req.params.id);
-
     const mealResult = await Recipe.findOne({
       where: {
         id: req.params.id
       }
     });
 
-    console.log("Raw meal result with id: ", mealResult);
-
     const recipe = mealResult.get({ plain: true });
 
-    console.log("Recipe serialized output: ", recipe);
-
-    res.json(recipe);
+    res.render('recipe_result', {
+      recipe
+    });
 
   } catch (err) {
     res.status(500).json(err);
