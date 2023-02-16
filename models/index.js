@@ -9,7 +9,8 @@ Recipe.belongsToMany(User, {
   through: {
     model: UserToRecipe,
     unique: false
-  }
+  },
+  as: 'meals_cooked'
 });
 
 // User belongToMany Recipes (through UserToRecipe)
@@ -18,8 +19,11 @@ User.belongsToMany(Recipe, {
   through: {
     model: UserToRecipe,
     unique: false
-  }
+  },
+  as: 'cooked_meals'
 });
+
+
 
 module.exports = {
   User,
