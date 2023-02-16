@@ -14,7 +14,7 @@ Node. NPM. bcrypt. connect-session-sequelizer. dotenv. express. express-handlerb
 
 ## Usage
 
-The Mealer Dealer Screenshots
+### The Mealer Dealer Screenshots
 
 Login Page
 ![Screenshot 2023-02-15 at 8 19 44 PM](https://user-images.githubusercontent.com/17559972/219445378-ca47ac05-1b4f-4c5a-bc40-41bab2fd3752.png)
