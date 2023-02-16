@@ -22,7 +22,7 @@ Login Page
 Homepage
 ![Screenshot 2023-02-15 at 8 19 08 PM](https://user-images.githubusercontent.com/17559972/219445477-d61d04b8-a18f-4e1a-be29-b88e71cf75aa.png)
 
-Buid a Meal Page
+Build a Meal Page
 ![Screenshot 2023-02-16 at 10 45 37 AM](https://user-images.githubusercontent.com/17559972/219446210-76fb673a-e2c8-4db2-a518-3ace211da095.png)
 
 Meal Results
