@@ -74,6 +74,26 @@ router.get('/meal_results/:total_time&:main_protein', withAuth, async (req, res)
   }
 });
 
+router.get('/meal_results/:id', async (req, res) => {
+  try {
+
+    const mealResult = await Recipe.findOne({
+      where: {
+        id: req.params.id
+      }
+    });
+
+    const recipe = mealResult.get({ plain: true });
+
+    res.render('recipe_result', {
+      recipe
+    });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/meal_results', withAuth, async (req, res) => {
   try {
     // Pass serialized data and session flag into template
