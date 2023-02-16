@@ -97,7 +97,7 @@ form {
 }
 
 #signup-btn {
-    background-color: hsl(237, 73%, 56%);
+    background-color: hsl(237, 77%, 47%);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
       0px;
@@ -157,7 +157,26 @@ h2 {
     cursor: pointer;
 }
 
+.card {
+    border: 2px solid #ee6e73;
+    border-radius: 3%;
+    padding: 10px;
+}
+
+.card:hover {
+    border-color:#009
+}
+
+.recipe-name {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 .meal_results_img {
     max-height: 200px;
     max-width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
 }
+
