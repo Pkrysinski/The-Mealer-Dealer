@@ -10,8 +10,8 @@ the app select a meal based on the criteria.
 
 ## Installation
 
-## Installation
 Node. NPM. bcrypt. connect-session-sequelizer. dotenv. express. express-handlerbars. express-session. mysql2. sequelize. 
+
 ## Usage
 
 The Mealer Dealer Screenshots
