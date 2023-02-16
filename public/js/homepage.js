@@ -6,4 +6,13 @@ const createMealButtonHandler = async (event) => {
 
 };
 
+const viewPastMealsButtonHandler = async (event) => {
+
+    event.preventDefault();
+
+    document.location.replace('/api/meals/meal_history');
+
+};
+
+document.querySelector('#pastMealsBtn').addEventListener('click', viewPastMealsButtonHandler);
 document.querySelector('#createMealBtn').addEventListener('click', createMealButtonHandler);

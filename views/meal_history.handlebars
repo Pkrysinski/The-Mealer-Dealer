@@ -1,5 +1,14 @@
 {{!-- This will pass each meal in the user's cooked meals from the UserToRecipe table to the cooked_meals.handlebars partial to be rendered as a card --}}
 {{!-- Will likely need to reference the UserToRecipe table as the main table, and have the Recipe table as the include in the function --}}
-{{#each mealHistory as | mealHistory | }}
+{{#if logged_in}}
+<div class="meal_history_container">
+{{#each history as | cookedMeal | }}
 {{> cooked_meals}}
 {{/each}}
+</div>
+
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
+
+<script src="/js/mealresults.js"></script>

@@ -1,15 +1,22 @@
 <section class="card">
-  <a href="/meal_history/{{recipe_id}}">
-    <header>{{recipe.name}}</header>
+  <a href="meal_history/{{id}}">
+    <header class="recipe-name">{{name}}</header>
 
     <div class="card-body">
-      <img src="{{image}}" alt="{{recipe.description}}">
-      <p>Main Protein: {{recipe.main_protein}}</p>
-      <p>Description: {{recipe.description}}</p>
-      <p>Prep Time: {{recipe.prep_time}}</p>
-      <p>Cook Time: {{recipe.cook_time}}</p>
-      <p>Servings: {{recipe.servings}}</p>
-      <p>Cooked: {{cooked}}</p>
+      <img src="{{image}}" alt="{{description}}" class="meal_results_img">
+      <p>Main Protein: {{main_protein}}</p>
+      <p>Description: {{description}}</p>
+      <p>Prep Time: {{prep_time}}</p>
+      <p>Cook Time: {{cook_time}}</p>
+      <p>Servings: {{servings}}</p>
+      <p>Cooked: {{meals_cooked.cooked}}</p>
+      <div class="switch">
+        <label>
+          <input type="checkbox" data-id="{{id}}" class="cooked-toggle" id="{{id}}" checked="true">
+          <span class="lever"></span>
+          Cooked
+        </label>
+      </div>      
     </div>
   </a>
 </section>

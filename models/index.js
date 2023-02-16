@@ -23,8 +23,6 @@ User.belongsToMany(Recipe, {
   as: 'cooked_meals'
 });
 
-
-
 module.exports = {
   User,
   Recipe,
