@@ -1,4 +1,11 @@
 {{!-- This will pass the meal results to the meals.handlebars partial to render each meal result as a card. --}}
-{{#each mealResults as | mealResult |}}
+{{#if logged_in}}
+<div class="meal_results_container">
+{{#each meals as | meal |}}
 {{> meals}}
 {{/each}}
+</div>
+
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
