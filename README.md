@@ -32,7 +32,6 @@ Meal Results
 Recipe Results
 <img width="953" alt="Screenshot 2023-02-16 at 5 41 28 PM" src="https://user-images.githubusercontent.com/17559972/219520320-e6bd8c91-0769-4e83-826c-23c8740202e8.png">
 
-
 Past Meals
 <img width="878" alt="Screenshot 2023-02-16 at 5 42 49 PM" src="https://user-images.githubusercontent.com/17559972/219520503-64b41f21-4c58-4659-8a3f-ee9b4e7654d8.png">
 
