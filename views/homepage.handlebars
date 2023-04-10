@@ -1,13 +1,10 @@
-<div>
-
-</div>
-<div>
-    <h3>Please choose from the following</h3>
-</div>
-
-<div>
-    <button id="createMealBtn" class="cta-button">Create a Meal</button>
-    <button id="pastMealsBtn" class="cta-button">View Past Meals</button>
-</div>
-
-<script src="./js/homepage.js"></script>
+<h1>The Tech Blog</h1>
+{{#each blogs}}
+  <section class="card">
+    <a href="/blogs/{{id}}" class="card-body">
+        <h3 class="card-title">{{title}}</h3> 
+        <h5>Posted by {{user.username}} on {{createdAt}}</h5>
+        <p class="card-text">{{content}}</p>
+    </a>
+  </section>
+{{/each}}
